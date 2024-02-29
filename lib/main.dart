@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider_pattern/Model/CounterModel.dart';
-import 'package:flutter_provider_pattern/Provider/MyHomePage.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,16 +11,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<CounterModel>(
-      create: (context) => CounterModel(),
-      child: MaterialApp(
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Flutter Provider Pattern',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage(),
-      ),
     );
   }
 }
